@@ -1,15 +1,17 @@
 <html>
 <head>
 <title>mi cuarta pagina</title>
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="tres.css">
 </head>
 <body>
 <h1> Mi cuarta WEB </h1>
   <script>
-// switch
+ 
     var dia = prompt ( "escribe un numero del 0 al 6");
     var diaNombre = "ENERO";
     dia = Number(dia);
+    switch dia
+     {
     case 0:
     diaNombre = "Lunes"
     break
@@ -33,44 +35,12 @@
     break
     default:
     diaNombre = "Número de día incorrecto"
+  }
 document.write ("<br>");
     document.write ("<h3 id='demo1'> El dia de la semana correspondiente es: " +diaNombre);
     document.write ("</h3>");
     document.write ("<br><br><br>");
     
-
-
-
-
-
-
-
-    
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 </body>
-
-
-
-
-
-
-
-  
 </html>
