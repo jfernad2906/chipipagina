@@ -1,4 +1,4 @@
-fuction pedirNumeroEnRango(mín, max) {
+fuction pedirNumeroEnRango(min, max) {
 var numero;
 do {
   numero = prompt("Mete un numero entre " + min +" y " + max + ":");
