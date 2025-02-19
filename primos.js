@@ -7,6 +7,7 @@ function comprobarsiesprimo (numero)
         if (numero % i ==0)
         {
           esPrimo = false;
+          return esPrimo;
         }
  
       }
