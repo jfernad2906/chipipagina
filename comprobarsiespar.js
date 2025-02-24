@@ -1,9 +1,8 @@
 function comprobarsiespar (numero)
   {
     var esPar;
-    var i;
-    
-        if (numero % i ===0)
+      
+        if (numero % 2 ===0)
         {
           esPar = true;
           return esPar;
