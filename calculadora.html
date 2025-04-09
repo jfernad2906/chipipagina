@@ -38,16 +38,16 @@
     <h2>Calculadora Simple</h2> <!-- Título de la calculadora -->   
     <input type="number" id="entrada1" placeholder="Primer número" value="13"><br> <!-- Campo para el primer número -->    
     <input type="number" id="entrada2" placeholder="Segundo número" value ="666"><br>  <!-- Campo para el segundo número -->
-    
+     <input type="number" id="entrada3" placeholder="tercer número" value="21"><br>
     <!-- Botones para realizar operaciones -->
     <button id="buttonSumar">Sumar</button>
     <button id="buttonMultiplicar">Multiplicar</button>
-      
+       <button id="buttonRestar">Restar</button>
     <div id="resultado">ÁREA DONDE SE MOSTRARÁ EL RESULTADO</div> 
     
     <!-- Código JavaScript que hace funcionar la calculadora -->
     <script>
-        var numero1, numero2, botonSumar, botonMultiplicar, resultado, num1, num2;
+        var numero1, numero2, numero3, botonSumar, botonMultiplicar, botonRestar, resultado, num1, num2, num3;
         
         // Esperamos a que la página termine de cargar
         document.addEventListener('DOMContentLoaded', function() {
@@ -55,26 +55,35 @@
             // Obtenemos los elementos de la página:
             numero1 = document.getElementById('entrada1'); // Obtenemos el primer número del formulario
             numero2 = document.getElementById('entrada2'); // Obtenemos el segundo número del formulario
+             numero3 = document.getElementById('entrada3'); // Obtenemos el segundo número del formulario
             resultado = document.getElementById('resultado'); // Donde mostraremos el resultado
             botonSumar = document.getElementById('buttonSumar');
             botonMultiplicar = document.getElementById('buttonMultiplicar');
+             botonRestar = document.getElementById('buttonRestar');
             
             // Configuramos qué pasa cuando se hace clic en el botón Sumar
             botonSumar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
-                
+                num3 = Number(numer32.value);
                 // Mostramos el texto con la operación y el resultado
-               resultado.textContent = (num1 + " sumado a  " + num2 +" es igual a "+ (num1+num2));
+               resultado.textContent = (num1 + " sumado a  " + num2 +" sumado a " + num3 " es igual a "+ (num1+num2+num3));
             });
 
             /// Configuramos qué pasa cuando se hace clic en el botón Multiplicar
             botonMultiplicar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
-
+                 num3 = Number(numero3.value);
                 // Mostramos el texto con la operación y el resultado
-                resultado.textContent = ( num1 + " multiplicado por "+ num2 + " es igual a "+ (num1*num2));
+                resultado.textContent = ( num1 + " multiplicado por "+ num2 + " multiplicado por "+ num3" es igual a "+ (num1*num2*num3));
+            });
+                        botonRestar.addEventListener('click', function() {
+                num1 = Number(numero1.value);
+                num2 = Number(numero2.value);
+                 num3 = Number(numero3.value);
+                // Mostramos el texto con la operación y el resultado
+                resultado.textContent = ( num1 + " restado a "+ num2 + " restado a  "+ num3" es igual a "+ (num1-num2-num3));
             });
          
         });
