@@ -78,6 +78,8 @@ tu numero favorito<!DOCTYPE html>
     <script>
         // Declaramos las variables que usaremos globalmente
         var numero, mensajeDiv;
+         var esPrimo;
+  
 
         // Esperamos a que se haga clic en el botón
         document.getElementById('botonPrimo').addEventListener('click', function() {
@@ -87,14 +89,15 @@ tu numero favorito<!DOCTYPE html>
 
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
-
+            esPrimo = comprobarsiesprimo (numero);
             // Si el usuario escribió algo, saludamos
-            if (numero) {
-                mensajeDiv.textContent = ("¡Hola, " + numero + "! ¡Bienvenido a clase! 👋");
+            if (esPrimo == true )
+            {
+                mensajeDiv.textContent = ("¡Hola, " + numero + "! es un numero primo!");
             } 
             // Si el campo está vacío, le pedimos que escriba su nombre
             else {
-                mensajeDiv.textContent = ("¡Dime tú nombre para saludarte 😊!");
+                mensajeDiv.textContent = ( numero + " NO es un numero primo!");
             }
         });
     </script>
