@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+tu numero favorito<!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>¡Salúdame!</title>
+    <title>¡Comprueba si es primo!</title>
     <style>
         /* Estilos generales para el cuerpo de la página */
         body {
@@ -63,13 +63,13 @@
 <body>
     <!-- Contenedor principal -->
     <div class="contenedor">
-        <h1>¿Cómo te llamas?</h1>
+        <h1>Escribee tu numero favorito</h1>
 
         <!-- Campo de entrada para el nombre del usuario -->
-        <input type="text" id="entradaNombre" placeholder="Teclea tú nombre aquí"><br>
+        <input type="text" id="entradaNumero" placeholder="Teclea tú numero aquí"><br>
 
-        <!-- Botón para generar el saludo -->
-        <button id="botonSaludar">Saludar</button>
+        <!-- Botón para ver si es primo -->
+        <button id="botonPrimo">Primo</button>
 
         <!-- Área donde se mostrará el mensaje -->
         <div id="mensaje"></div>
@@ -77,20 +77,20 @@
 
     <script>
         // Declaramos las variables que usaremos globalmente
-        var nombre, mensajeDiv;
+        var numero, mensajeDiv;
 
         // Esperamos a que se haga clic en el botón
-        document.getElementById('botonSaludar').addEventListener('click', function() {
+        document.getElementById('botonPrimo').addEventListener('click', function() {
 
             // Obtenemos el valor del input (lo que el usuario ha escrito)
-            nombre = document.getElementById('entradaNombre').value;
+            numero = document.getElementById('entradaNumero').value;
 
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
 
             // Si el usuario escribió algo, saludamos
-            if (nombre) {
-                mensajeDiv.textContent = ("¡Hola, " + nombre + "! ¡Bienvenido a clase! 👋");
+            if (numero) {
+                mensajeDiv.textContent = ("¡Hola, " + numero + "! ¡Bienvenido a clase! 👋");
             } 
             // Si el campo está vacío, le pedimos que escriba su nombre
             else {
