@@ -28,9 +28,20 @@ const coche = {
   año: 2020,
   encendido: false,
   arrancar () {
+    if (this.encendido=false)
+    {
+      this.encendido=true;
+      return " El coche está encendido";
+    }
   },
   parar() {
-}
+       if (this.encendido=true)
+    {
+      this.encendido=false;
+      return " El coche está parado";
+    }
+  }
+};
   
   console.log(persona.nombre);
     console.log(persona.edad);
