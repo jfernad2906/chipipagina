@@ -8,6 +8,14 @@
   
  <button onclick="persona.saludar()"> SALUDAR</button>
   <div id="resultado-persona"> Aquí apareceran cositas</div>
+  <h2>MI SEGUNDO OBJETO:</h2>
+  
+ <button onclick="coche.arrancar()"> ARRANCAR</button>
+   <button onclick="coche.parar()"> PARRAR</button>
+  <div id="resultado-coche"></div>
+ 
+ 
+  
   
 <script>
   const persona =
@@ -32,6 +40,8 @@ const coche = {
     {
       this.encendido=true;
       return " El coche está encendido";
+       const output = document.getElementById('resultado-coche');
+       output.innerHTML = `El coche  ${this.encendido} `;
     }
   },
   parar() {
@@ -39,6 +49,7 @@ const coche = {
     {
       this.encendido=false;
       return " El coche está parado";
+       output.innerHTML = `El coche  ${this.encendido} `;
     }
   }
 };
