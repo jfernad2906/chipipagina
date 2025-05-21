@@ -19,7 +19,7 @@ nombre: "JORGE",
       Equipo_favorito: "Sporting de Gijón",
       saludar () {
      const output = document.getElementById('resultado-persona');
-       output.innerHTML = "HOLA ATODOS";
+       output.innerHTML = "HOLA ${this.nombre} TENGO ${this.edad}";
     }
   };
   console.log(persona.nombre);
