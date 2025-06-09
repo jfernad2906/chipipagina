@@ -66,7 +66,7 @@
         <h1>Escribe tus tareas</h1>
 
         <!-- Campo de entrada para el nombre del usuario -->
-        <input type="number" id="entradaNumero" placeholder="Escribe aqui"><br>
+        <input type="number" id="entradaTarea" placeholder="Escribe aqui"><br>
 
         <!-- Botón para ver su factorial -->
         <button id="botonTarea">Añadir tarea</button>
@@ -76,9 +76,11 @@
     </div>
    
     <script>
-       amigo = prompt(" escribe el nombre de tus amigos :");
+        var tarea;
+        var tareas =[];
+       tarea = prompt(" escribe el nombre de tus amigos :");
   
-      amigos.push (amigo);
+      tareas.push (tarea);
     }
     document.write ("<h2>Los amigos que has introducido son:<br></h2>");
      document.write("<span style='color:blue; font-size: 20px; font-weight: bold;'>" + amigos + "</span>");
@@ -88,7 +90,7 @@
         document.getElementById('botonTarea').addEventListener('click', function() {
 
             // Obtenemos el valor del input (lo que el usuario ha escrito)
-            numero = document.getElementById('entradaNumero').value;
+            tarea = document.getElementById('entradaTarea').value;
 
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
