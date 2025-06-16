@@ -82,8 +82,7 @@
         var i;
         var num_tareas;
         var mensajeDiv;
-  for (i=1; i <= num_tareas; i = i+1 )
-      tareas.push (tarea);
+ 
    
   
      document.write("<span style='color:blue; font-size: 20px; font-weight: bold;'>" + tareas + "</span>");
@@ -92,6 +91,8 @@
         // Esperamos a que se haga clic en el botón
         document.getElementById('botonTarea').addEventListener('click', function() {
 
+            for (i=1; i <= num_tareas; i = i+1 )
+            tareas.push (tarea);
             // Obtenemos el valor del input (lo que el usuario ha escrito)
             tarea = document.getElementById('entradaTarea').value;
             // Referencia al elemento donde mostraremos el mensaje
